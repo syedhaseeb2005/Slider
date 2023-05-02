@@ -47,6 +47,11 @@ nextbtn.addEventListener("click",()=>{
 })
 prebtn.addEventListener("click",()=>{
     counter = --counter;
+    if(counter === 0){
+        prebtn.style.display = "none"
+    }else{
+        prebtn.style.display = "block"
+    }
     if(counter < content.length -1){ 
         nextbtn.style.display = "block"
     }
