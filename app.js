@@ -36,22 +36,17 @@ function showcontent(add){
 }
 nextbtn.addEventListener("click",()=>{
     counter = ++counter;
-    if(counter < 0){
-        counter = 0;
-        // nextbtn.style.display = "block"
-    // }else{
-        // nextbtn.style.display = "none"
+    if(counter === content.length -1){
+       nextbtn.style.display = "none"
+    }else{
+        nextbtn.style.display = "block"
     }
     showcontent(counter)
 })
 prebtn.addEventListener("click",()=>{
     counter = --counter;
-    if(counter < 0){
-        counter = 0;
-        prebtn.style.display = "block"
-    }else{
-        // prebtn.classList.remove("hidden")
-        prebtn.style.display = "none"
+    if(counter < content.length -1){
+        nextbtn.style.display = "block"
     }
     showcontent(counter)
 })
