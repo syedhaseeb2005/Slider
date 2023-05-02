@@ -36,18 +36,20 @@ function showcontent(add){
 }
 nextbtn.addEventListener("click",()=>{
     counter = ++counter;
-    if(counter === content.length -1){
-       nextbtn.style.display = "none"
+    if(counter === content.length - 1){
+        nextbtn.style.display = "none"
+        prebtn.style.display = "block"
     }else{
         nextbtn.style.display = "block"
+        prebtn.style.display = "block"
     }
     showcontent(counter)
 })
 prebtn.addEventListener("click",()=>{
     counter = --counter;
-    if(counter < content.length -1){
+    if(counter < content.length -1){ 
         nextbtn.style.display = "block"
     }
     showcontent(counter)
 })
-console.log(prebtn)
+prebtn.style.display = "none"
